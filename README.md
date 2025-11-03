@@ -1,4 +1,7 @@
-# UniHR: Hierarchical Representation Learning for Unified Knowledge Graph Link Prediction
+# UniHR
+
+- An implementation for [UniHR: Hierarchical Representation Learning for Unified Knowledge Graph Link Prediction](https://arxiv.org/abs/2411.07019)
+
 
 ### Introduction
 Beyond-triple fact representations including hyper-relational facts with auxiliary key-value pairs, temporal facts with additional timestamps, and nested facts implying relationships between facts, are gaining significant attention. However, existing link prediction models are usually designed for one specific type of facts, making it difficult to generalize to other fact representations. To overcome this
@@ -82,4 +85,16 @@ The training and testing script for wikidata12k:
 
 ```
 python -u ./src/run.py --dataset "wikidata12k" --device "3" --vocab_size 13201 --vocab_file "./data/wikidata12k/vocab.txt" --train_file "./data/wikidata12k/train.json" --test_file "./data/wikidata12k/test.json" --ground_truth_file "./data/wikidata12k/all.json" --num_workers 5 --num_relations 26 --num_ent 12554 --max_seq_len 7 --max_arity 4 --hidden_dim 200 --global_layers 1 --global_dropout 0.2 --global_activation "elu" --global_heads 4 --local_layers 2 --local_dropout 0.2 --local_heads 4 --decoder_activation "gelu" --batch_size 2048 --lr 5e-4 --weight_deca 0.01 --entity_soft 0.4 --relation_soft 0.3 --hyperedge_dropout 0.0 --epoch 300 --warmup_proportion 0.1 
+```
+
+### 🤝 Cite:
+Please consider citing this paper if you find our work useful.
+
+```bigquery
+@article{liu2024unihr,
+  title={UniHR: Hierarchical Representation Learning for Unified Knowledge Graph Link Prediction},
+  author={Liu, Zhiqiang and Hua, Yin and Chen, Mingyang and Zhang, Yichi and Chen, Zhuo and Liang, Lei and Chen, Huajun and Zhang, Wen},
+  journal={arXiv preprint arXiv:2411.07019},
+  year={2024}
+}
 ```

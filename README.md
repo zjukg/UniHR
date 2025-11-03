@@ -2,7 +2,6 @@
 
 - An implementation for [UniHR: Hierarchical Representation Learning for Unified Knowledge Graph Link Prediction](https://arxiv.org/abs/2411.07019)
 
-
 ### Introduction
 Beyond-triple fact representations including hyper-relational facts with auxiliary key-value pairs, temporal facts with additional timestamps, and nested facts implying relationships between facts, are gaining significant attention. However, existing link prediction models are usually designed for one specific type of facts, making it difficult to generalize to other fact representations. To overcome this
 limitation, we propose a Unified Hierarchical Representation learning framework (UniHR)
@@ -98,3 +97,4 @@ Please consider citing this paper if you find our work useful.
   year={2024}
 }
 ```
+
